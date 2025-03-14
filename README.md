@@ -136,56 +136,6 @@ Rufus addresses the key challenges in web data extraction for RAG systems by com
 
 This implementation allows engineers to seamlessly extract web content with minimal configuration while producing reliable, structured data for their RAG applications.
 
-Modular Code Structure Explained
-Rufus is organized into a well-structured Python package with clear separation of concerns. Here's how the different components work together:
-Core Architecture
-
-Client Interface (client.py)
-
-Provides the main API for users
-Coordinates between crawler and synthesizer components
-Handles high-level workflow management
-
-
-Web Crawler (crawler.py)
-
-Intelligently navigates websites based on strategies
-Manages concurrent requests and crawl state
-Delegates content extraction to the extractor
-
-
-Content Extractor (extractor.py)
-
-Extracts main content from HTML pages
-Calculates content relevance based on strategy
-Detects content types (FAQ, product info, etc.)
-Extracts and evaluates links for crawling
-
-
-Document Synthesizer (synthesizer.py)
-
-Groups crawl results by content type
-Selects most relevant content from each group
-Uses LLM to synthesize structured documents
-Tailors synthesis approach by content type
-
-
-
-Data Models and Utilities
-
-Models (models.py)
-
-CrawlResult: Represents processed webpage data
-CrawlStrategy: Configuration for crawler behavior
-Document: Final structured output for RAG systems
-
-
-Utilities (utils.py)
-
-URL normalization and processing
-Logging setup
-Document saving functionality
-
 ## Environment Information
 
 **Operating System:**
