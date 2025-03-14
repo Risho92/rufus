@@ -40,7 +40,7 @@ Similar content is aggregated
 An LLM synthesizes the information into coherent, well-structured documents
 Metadata preserves source links for attribution
 
-### jChallenges and Solutions
+### Challenges and Solutions
 
 #### Dynamic Content:
 
