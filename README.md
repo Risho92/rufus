@@ -171,5 +171,17 @@ URL normalization and processing
 Logging setup
 Document saving functionality
 
+## Environment Information
 
+**Operating System:**
+Windows
+
+**OS Version:**
+11
+
+**Python Version:**
+3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:49:16) [MSC v.1929 64 bit (AMD64)]
+
+**Architecture:**
+AMD64
 
