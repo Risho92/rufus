@@ -70,10 +70,10 @@ Solution: Flexible content extraction that adapts to different page layouts
 API Design Considerations
 The API is designed for simplicity while allowing advanced configuration:
 
-# Simple usage
+## Simple usage
 documents = client.scrape("https://example.com", "Find product information")
 
-# Advanced usage
+## Advanced usage
 client = RufusClient(
     api_key=key,
     max_pages=50,
@@ -88,6 +88,19 @@ documents = client.scrape(
     "Find product information and pricing details"
 )
 client.save_documents(documents)
+
+## Usage Example
+The examples/basic_usage.py shows how easily Rufus can be used.
+
+## RufusClient Parameters
+
+- api_key: OpenAI key
+- max_pages: Maximum number of pages Rufus should crawl
+- concurrency: Maximum concurrency when crawling. This limit the number of threads spawn during webscraping.
+- max_depth: Maximum depth to which crawling should happen. Eg: depth 3 means a url, sub url and sub sub url will be crawled.
+- min_relevance: Content in the webpage should cross this relevance threshold to be considered as relevant content. Value is between 0-1. A lower number means a lot more content will be considered relevant.
+- output_format: json and text are the available output formats
+- output_file: Name of the output file. A unique identifier will be appended to this file name.
 
 Scalability and Maintainability
 To ensure Rufus remains reliable and scalable:
@@ -158,6 +171,5 @@ URL normalization and processing
 Logging setup
 Document saving functionality
 
-Usage Example
-The examples/basic_usage.py shows how easily Rufus can be used:
+
 
