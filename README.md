@@ -12,11 +12,6 @@ API Layer: Provides simple developer interface and authentication
 Implementation Strategy
 Rufus Implementation CodeClick to open codeTap to open
 Key Features Explained
-1. Instruction-Guided Crawling
-The heart of Rufus is the instruction interpreter that translates natural language instructions into crawling strategies:
-pythonCopyinstructions = "We're making a chatbot for the HR in San Francisco."
-documents = client.scrape("https://www.sfgov.com")
-The _create_crawl_strategy method uses an LLM to convert this instruction into actionable parameters:
 
 Keywords to prioritize
 Content types to focus on
