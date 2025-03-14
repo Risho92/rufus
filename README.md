@@ -105,14 +105,26 @@ The examples/basic_usage.py shows how easily Rufus can be used.
 - output_format: json and text are the available output formats
 - output_file: Name of the output file. A unique identifier will be appended to this file name.
 
-Scalability and Maintainability
+## Scalability and Maintainability
 To ensure Rufus remains reliable and scalable:
 
-Concurrency Control: ThreadPoolExecutor manages parallel requests
-Error Handling: Robust exception handling for network issues
-Logging: Comprehensive logging for debugging and monitoring
-Configuration: Adjustable parameters for different site types
-Output Flexibility: Multiple output formats (JSON, text) for different use cases
+- Concurrency Control: ThreadPoolExecutor manages parallel requests
+- Error Handling: Robust exception handling for network issues
+- Logging: Comprehensive logging for debugging and monitoring
+- Configuration: Adjustable parameters for different site types
+- Output Flexibility: Multiple output formats (JSON, text) for different use cases
+
+## Integration with RAG
+
+Output of Rufus can be written out to json or text file. Text from this file can be used as the input for RAG. json may be the best format to use. Given below is the structure of json file
+
+- type: one of the types
+- title: Title of the webpage
+- content: Contents from the url relevant to user's prompt
+- metadata:
+    - source_urls: all the urls Rufus crawled
+    - creation_time: creation time of the file
+    - instruction_prompt: user's prompt
 
 ## Conclusion
 Rufus addresses the key challenges in web data extraction for RAG systems by combining traditional web crawling with LLM-powered intelligence. The design focuses on:
