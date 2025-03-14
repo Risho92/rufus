@@ -3,11 +3,11 @@
 ## Architecture Overview
 Rufus would be designed with these core components:
 
-Instruction Interpreter: An LLM-powered module that translates user instructions into crawling strategies
-Intelligent Crawler: A flexible web crawler that navigates sites based on relevance heuristics
-Content Extractor: Identifies and extracts meaningful content from HTML
-Document Synthesizer: Structures extracted data into RAG-ready formats
-API Layer: Provides simple developer interface and authentication
+- Instruction Interpreter: An LLM-powered module that translates user instructions into crawling strategies
+- Intelligent Crawler: A flexible web crawler that navigates sites based on relevance heuristics
+- Content Extractor: Identifies and extracts meaningful content from HTML
+- Document Synthesizer: Structures extracted data into RAG-ready formats
+- API Layer: Provides simple developer interface and authentication
 
 ### Implementation Strategy
 
@@ -27,10 +27,10 @@ Relevance Scoring: Each page is evaluated based on keyword matches and LLM-based
 #### 3. Smart Link Prioritization
 Unlike basic crawlers that follow every link, Rufus uses:
 
-Domain filtering to stay on-site
-Content-type detection to prioritize valuable page types (FAQs, product info)
-Link text analysis to follow the most promising paths
-Depth control to manage crawl scope
+- Domain filtering to stay on-site
+- Content-type detection to prioritize valuable page types (FAQs, product info)
+- Link text analysis to follow the most promising paths
+- Depth control to manage crawl scope
 
 #### 4. Document Synthesis
 The most powerful feature is how Rufus transforms raw web content into structured documents:
@@ -47,18 +47,20 @@ Metadata preserves source links for attribution
 Challenge: Many sites use JavaScript to load content
 Solution: Implement optional headless browser integration for JavaScript rendering. This was attempted using selenium package but could not be completed within the allocated time.
 
+### Cost
+
+Challenge: Cost to handle a single prompt could be above $5
+Solution: This solution is using the latest models from OpenAI. These has to be swapped with smaller models before productionalizing.
 
 #### Rate Limiting:
 
 Challenge: Aggressive crawling can trigger site defenses
 Solution: Concurrent request management with configurable limits and polite delays
 
-
 #### Content Relevance:
 
 Challenge: Determining what content matters to the user
 Solution: Two-tier relevance scoring (keyword + LLM evaluation)
-
 
 #### Site Structure Variability:
 
