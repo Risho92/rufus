@@ -10,7 +10,7 @@ Document Synthesizer: Structures extracted data into RAG-ready formats
 API Layer: Provides simple developer interface and authentication
 
 ### Implementation Strategy
-Rufus Implementation CodeClick to open codeTap to open
+
 Key Features Explained
 
 - Keywords to prioritize
