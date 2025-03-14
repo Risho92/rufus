@@ -77,13 +77,17 @@ documents = client.scrape("https://example.com", "Find product information")
 client = RufusClient(
     api_key=key,
     max_pages=50,
-    concurrency=10
+    concurrency=10,
+    max_depth=3,
+    min_relevance=0.3,
+    output_format='json',
+    output_file='custom_file_name'
 )
 documents = client.scrape(
     "https://example.com",
     "Find product information and pricing details"
 )
-client.save_documents(documents, output_format="json")
+client.save_documents(documents)
 
 Scalability and Maintainability
 To ensure Rufus remains reliable and scalable:
