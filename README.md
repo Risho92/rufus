@@ -9,14 +9,14 @@ Content Extractor: Identifies and extracts meaningful content from HTML
 Document Synthesizer: Structures extracted data into RAG-ready formats
 API Layer: Provides simple developer interface and authentication
 
-Implementation Strategy
+### Implementation Strategy
 Rufus Implementation CodeClick to open codeTap to open
 Key Features Explained
 
-Keywords to prioritize
-Content types to focus on
-Relevance criteria
-Termination conditions
+- Keywords to prioritize
+- Content types to focus on
+- Relevance criteria
+- Termination conditions
 
 2. Intelligent Content Extraction
 Rufus goes beyond simple HTML scraping with:
