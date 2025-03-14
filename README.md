@@ -11,20 +11,20 @@ API Layer: Provides simple developer interface and authentication
 
 ### Implementation Strategy
 
-Key Features Explained
+#### 1. Key Features Explained
 
 - Keywords to prioritize
 - Content types to focus on
 - Relevance criteria
 - Termination conditions
 
-2. Intelligent Content Extraction
+#### 2. Intelligent Content Extraction
 Rufus goes beyond simple HTML scraping with:
 
 Main Content Detection: The _extract_main_content method identifies and extracts the meaningful parts of a page while filtering out navigation, headers, footers, and other boilerplate.
 Relevance Scoring: Each page is evaluated based on keyword matches and LLM-based relevance assessment to ensure only valuable content is processed.
 
-3. Smart Link Prioritization
+#### 3. Smart Link Prioritization
 Unlike basic crawlers that follow every link, Rufus uses:
 
 Domain filtering to stay on-site
@@ -32,7 +32,7 @@ Content-type detection to prioritize valuable page types (FAQs, product info)
 Link text analysis to follow the most promising paths
 Depth control to manage crawl scope
 
-4. Document Synthesis
+#### 4. Document Synthesis
 The most powerful feature is how Rufus transforms raw web content into structured documents:
 
 Content is grouped by type (FAQ, product info, etc.)
@@ -40,27 +40,27 @@ Similar content is aggregated
 An LLM synthesizes the information into coherent, well-structured documents
 Metadata preserves source links for attribution
 
-Challenges and Solutions
+### jChallenges and Solutions
 
-Dynamic Content:
+#### Dynamic Content:
 
 Challenge: Many sites use JavaScript to load content
 Solution: Implement optional headless browser integration for JavaScript rendering. This was attempted using selenium package but could not be completed within the allocated time.
 
 
-Rate Limiting:
+#### Rate Limiting:
 
 Challenge: Aggressive crawling can trigger site defenses
 Solution: Concurrent request management with configurable limits and polite delays
 
 
-Content Relevance:
+#### Content Relevance:
 
 Challenge: Determining what content matters to the user
 Solution: Two-tier relevance scoring (keyword + LLM evaluation)
 
 
-Site Structure Variability:
+#### Site Structure Variability:
 
 Challenge: Every site organizes content differently
 Solution: Flexible content extraction that adapts to different page layouts
