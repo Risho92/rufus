@@ -65,7 +65,10 @@ Solution: Two-tier relevance scoring (keyword + LLM evaluation)
 Challenge: Every site organizes content differently
 Solution: Flexible content extraction that adapts to different page layouts
 
+#### Dynamic Child Link Construction
 
+Challenge: Links to sub pages are dynamically constructed using Javascript
+Solution: requests_html module is used to extract the sub page links
 
 API Design Considerations
 The API is designed for simplicity while allowing advanced configuration:
@@ -111,18 +114,18 @@ Logging: Comprehensive logging for debugging and monitoring
 Configuration: Adjustable parameters for different site types
 Output Flexibility: Multiple output formats (JSON, text) for different use cases
 
-Conclusion
+## Conclusion
 Rufus addresses the key challenges in web data extraction for RAG systems by combining traditional web crawling with LLM-powered intelligence. The design focuses on:
 
-Making complex web extraction accessible through simple instructions
-Creating high-quality, structured documents ready for RAG systems
-Building a flexible system that can adapt to various websites
-Ensuring maintainability through clean architecture and error handling
+- Making complex web extraction accessible through simple instructions
+- Creating high-quality, structured documents ready for RAG systems
+- Building a flexible system that can adapt to various websites
+- Ensuring maintainability through clean architecture and error handling
 
 This implementation allows engineers to seamlessly extract web content with minimal configuration while producing reliable, structured data for their RAG applications.
 
 Modular Code Structure Explained
-I've reorganized the Rufus implementation into a well-structured Python package with clear separation of concerns. Here's how the different components work together:
+Rufus is organized into a well-structured Python package with clear separation of concerns. Here's how the different components work together:
 Core Architecture
 
 Client Interface (client.py)
