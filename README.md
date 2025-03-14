@@ -47,7 +47,7 @@ Metadata preserves source links for attribution
 Challenge: Many sites use JavaScript to load content
 Solution: Implement optional headless browser integration for JavaScript rendering. This was attempted using selenium package but could not be completed within the allocated time.
 
-### Cost
+#### Cost
 
 Challenge: Cost to handle a single prompt could be above $5
 Solution: This solution is using the latest models from OpenAI. These has to be swapped with smaller models before productionalizing.
